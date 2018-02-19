@@ -12,5 +12,5 @@ RUN apt-get install -y python3-flask
 RUN apt-get install -y python-imaging
 
 EXPOSE 8080
-RUN mkdir /home/work
-WORKDIR /home/work
+WORKDIR /ocr
+cmd FLASK_APP=ocr/web_app.py flask run --host=0.0.0.0 --port=8080
