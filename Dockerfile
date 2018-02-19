@@ -1,4 +1,4 @@
-#
+
 # Tesseract 4 OCR Runtime Environment - Docker Container
 #
 
@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y software-properties-common && add-apt-r
 RUN apt-get update && apt-get install -y tesseract-ocr 
 RUN apt-get install -y python3-requests
 RUN apt-get install -y python3-pip python-dev build-essential
-RUN apt-get install -y python3-flask
 RUN apt-get install -y python-imaging
+RUN pip3 install --upgrade pip setuptools; pip3 install Flask
 
 EXPOSE 8080
 WORKDIR /ocr
