@@ -6,6 +6,10 @@ FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y software-properties-common && add-apt-repository -y ppa:alex-p/tesseract-ocr
 RUN apt-get update && apt-get install -y tesseract-ocr 
+RUN apt-get install -y python3-requests
+RUN apt-get install -y python3-pip python-dev build-essential
+RUN apt-get install -y python3-flask
+RUN apt-get install -y python-imaging
 
 EXPOSE 8080
 RUN mkdir /home/work
